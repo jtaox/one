@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.jcodecraeer.xrecyclerview.XRecyclerView
+                android:id="@+id/rv_yj"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </com.jcodecraeer.xrecyclerview.XRecyclerView>
+
+            <LinearLayout
+                android:id="@+id/ll_controllbar"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:alpha="0.7"
+                android:background="@color/colorPrimary">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_launcher" />
+
+                <FrameLayout
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent">
+
+                    <me.jtao.yjh.widget.VisualizerView
+                        android:id="@+id/vv_visualizer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <me.jtao.yjh.widget.LyricView
+                        android:id="@+id/lyric_view"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent" />
+                    <TextView
+                        android:id="@+id/tv_lrc_noti"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:text="歌词加载中..."/>
+                </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</FrameLayout>

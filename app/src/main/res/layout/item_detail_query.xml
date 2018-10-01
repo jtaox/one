@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:descendantFocusability="beforeDescendants"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E8E9EA"
+        android:padding="8dp">
+
+        <FrameLayout
+            android:id="@+id/fl_music_bg"
+            android:layout_width="45dp"
+            android:layout_height="45dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_music_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_music_note_black_18dp"
+                app:civ_border_color="#D1D9E3"
+                app:civ_border_width="1dp" />
+
+            <!--<Button
+                android:id="@+id/btn_music_control"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:focusable="false"
+                android:background="@android:drawable/ic_media_play" />-->
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_music_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/fl_music_bg"
+            android:text="音乐名"
+            android:textColor="#585959" />
+
+        <TextView
+            android:id="@+id/tv_singer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_music_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/fl_music_bg"
+            android:text="歌手"
+            android:textColor="#818182" />
+    </RelativeLayout>
+
+
+</LinearLayout>

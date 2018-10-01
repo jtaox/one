@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="3dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="--:--"
+        android:gravity="left"
+        android:padding="3dp"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/tv_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <SeekBar
+        android:id="@+id/sb_seekbar"
+        android:paddingTop="3dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="3dp"
+        android:progressDrawable="@drawable/layer_player_playing_progress"
+        android:thumb="@drawable/shape_seekbar_thumb"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:maxHeight="2.0dip"
+        android:minHeight="2.0dip"
+        android:thumbOffset="0dp"
+        android:indeterminate="false" />
+
+    <TextView
+        android:text="--:--"
+        android:padding="3dp"
+        android:gravity="right"
+        android:textColor="#ffffff"
+        android:id="@+id/tv_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

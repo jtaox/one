@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/menu_nav_yj"
+            android:checked="true"
+            android:title="一句"
+            android:icon="@android:drawable/ic_menu_add"/>
+
+        <item
+            android:id="@+id/menu_nav_tp"
+            android:checked="true"
+            android:title="图片"
+            android:icon="@android:drawable/ic_menu_add"/>
+
+        <item
+            android:id="@+id/menu_nav_set"
+            android:checked="true"
+            android:title="设置"
+            android:icon="@android:drawable/ic_menu_set_as"/>
+
+    </group>
+</menu>

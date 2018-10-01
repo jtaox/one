@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#F2F4F5"
+        app:cardCornerRadius="1dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                app:civ_border_width="1.5dp"
+                app:civ_border_color="#E7E9E9"
+                app:civ_fill_color="#E7E9E9"
+                android:layout_marginRight="12dp"
+                android:src="@mipmap/icon"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_author"
+                        android:textColor="#4D7EAF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:textColor="#676767"
+                        android:text="推荐单曲:"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8月15日"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="11sp"
+                    android:textColor="#8B8B8C" />
+                <!-- 推荐理由 -->
+                <TextView
+                    android:id="@+id/tv_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="#5F6060" />
+
+                <me.jtao.yjh.widget.StereoView
+                    android:id="@+id/sv_stereo"
+                    android:background="#E8E9EA"
+                    app:paddingStart="8dp"
+                    app:paddingEnd="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp">
+                    <!-- 歌词 -->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <!--<com.mariostudio.lyricmanager.views.LyricView
+                            android:id="@+id/lyric_view"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent" />-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="歌词"/>
+                    </FrameLayout>
+
+
+
+                    <!-- main -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp">
+
+                        <FrameLayout
+                            android:id="@+id/fl_music_bg"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/iv_music_bg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:civ_border_color="#D1D9E3"
+                                app:civ_border_width="1dp" />
+
+                            <Button
+                                android:id="@+id/btn_music_control"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:background="@android:drawable/ic_media_play" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/tv_music_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@id/fl_music_bg"
+                            android:text="音乐名"
+                            android:textColor="#585959" />
+
+                        <TextView
+                            android:id="@+id/tv_singer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_music_name"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@id/fl_music_bg"
+                            android:text="歌手"
+                            android:textColor="#818182" />
+
+                    </RelativeLayout>
+
+                    <!-- 控制 -->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <include
+                            layout="@layout/layout_ys_item_controll"/>
+                    </FrameLayout>
+
+                </me.jtao.yjh.widget.StereoView>
+<!--
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#E8E9EA"
+                    android:padding="8dp">
+
+                    <FrameLayout
+                        android:id="@+id/fl_music_bg"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_music_bg"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:civ_border_color="#D1D9E3"
+                            app:civ_border_width="1dp" />
+
+                        <Button
+                            android:id="@+id/btn_music_control"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:background="@android:drawable/ic_media_play" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/tv_music_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/fl_music_bg"
+                        android:text="音乐名"
+                        android:textColor="#585959" />
+
+                    <TextView
+                        android:id="@+id/tv_singer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_music_name"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/fl_music_bg"
+                        android:text="歌手"
+                        android:textColor="#818182" />
+                </RelativeLayout>
+-->
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>
